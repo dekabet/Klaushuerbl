@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klaus Hürbl – Quoten- &amp; Value-Experte | Sportwetten-Analyst</title>
+<meta name="description" content="Klaus Hürbl war über zwölf Jahre Quotengestalter und Head of Football Trading bei einem internationalen Buchmacher. Heute unabhängiger Sportwetten-Analyst und Quoten-Experte.">
+<meta property="og:title" content="Klaus Hürbl – Quoten- &amp; Value-Experte">
+<meta property="og:description" content="Vom Buchmacher zum unabhängigen Analysten: Quotenbildung, Value Betting und Marktdynamik aus erster Hand.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="https://www.klaus-huerbl.de/assets/klaus-huerbl.webp">
+<meta name="theme-color" content="#0B0F0D">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.klaus-huerbl.de/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0F0D;
+    --ink-2:#101613;
+    --panel:#141C18;
+    --line:#26322B;
+    --paper:#EFEADD;
+    --paper-dim:#A9AA9B;
+    --paper-mute:#7C8377;
+    --jade:#3FBF8F;
+    --jade-deep:#1F6E52;
+    --amber:#E0A53A;
+    --maxw:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Archivo',sans-serif;
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(900px 600px at 82% -5%, rgba(63,191,143,.10), transparent 60%),
+      radial-gradient(700px 500px at 0% 100%, rgba(224,165,58,.06), transparent 55%);
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:rgba(11,15,13,.72);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Fraunces',serif;font-size:20px;font-weight:600;letter-spacing:.01em}
+  .brand small{display:block;font-family:'Archivo';font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--jade);margin-top:1px}
+  .navlinks{display:flex;gap:30px;font-size:13.5px;font-weight:500;letter-spacing:.04em;color:var(--paper-dim)}
+  .navlinks a:hover{color:var(--paper)}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  /* hero */
+  header{padding:84px 0 76px;border-bottom:1px solid var(--line)}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+  .eyebrow{
+    font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--jade);margin-bottom:22px;display:flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:42px;height:1px;background:var(--jade)}
+  h1{font-size:clamp(44px,6.4vw,76px);font-weight:600}
+  .role{
+    font-family:'Archivo';font-size:16px;font-weight:600;letter-spacing:.04em;
+    color:var(--paper-dim);margin:18px 0 26px;text-transform:none;
+  }
+  .lead{font-size:19px;color:var(--paper-dim);max-width:30em;margin-bottom:34px}
+  .lead em{font-family:'Fraunces',serif;font-style:italic;color:var(--paper);font-size:21px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:13px 24px;font-size:14px;
+    font-weight:600;letter-spacing:.02em;border-radius:2px;transition:.2s;
+  }
+  .btn-primary{background:var(--jade);color:var(--ink)}
+  .btn-primary:hover{background:#52d1a1}
+  .btn-ghost{border:1px solid var(--line);color:var(--paper-dim)}
+  .btn-ghost:hover{border-color:var(--jade);color:var(--paper)}
+
+  /* portrait */
+  .portrait-frame{position:relative}
+  .portrait-frame::after{
+    content:"";position:absolute;inset:14px -14px -14px 14px;
+    border:1px solid var(--jade-deep);border-radius:4px;z-index:-1;
+  }
+  .portrait-frame svg,.portrait-frame img{width:100%;height:auto;display:block;border-radius:4px;
+    box-shadow:0 30px 70px -28px rgba(0,0,0,.8)}
+  .badge{
+    position:absolute;left:-14px;bottom:26px;background:var(--ink-2);
+    border:1px solid var(--line);border-left:3px solid var(--amber);
+    padding:12px 18px;border-radius:2px;
+  }
+  .badge b{font-family:'Fraunces',serif;font-size:22px;display:block}
+  .badge span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-mute)}
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;gap:48px}
+    .portrait-frame{max-width:380px;margin:0 auto}
+  }
+
+  /* stat strip */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-bottom:1px solid var(--line);
+  }
+  .stat{padding:34px 26px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{font-family:'Fraunces',serif;font-size:38px;font-weight:600;color:var(--paper);display:block}
+  .stat span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-mute)}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
+
+  section{padding:96px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:14px}
+  .sec-num{font-family:'Fraunces',serif;font-size:15px;color:var(--jade);font-weight:600}
+  .sec-head h2{font-size:clamp(30px,4vw,46px)}
+  .sec-sub{color:var(--paper-mute);font-size:14px;letter-spacing:.04em;margin-bottom:46px;max-width:38em}
+
+  /* story */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .story p{color:var(--paper-dim);margin-bottom:20px}
+  .story p:first-child::first-letter{
+    font-family:'Fraunces',serif;font-size:64px;line-height:.8;float:left;
+    padding:6px 14px 0 0;color:var(--jade);font-weight:600;
+  }
+  .pullquote{
+    grid-column:1/-1;border-left:2px solid var(--amber);padding:8px 0 8px 30px;
+    font-family:'Fraunces',serif;font-style:italic;font-size:clamp(22px,3vw,30px);
+    color:var(--paper);line-height:1.4;margin:8px 0;
+  }
+  @media(max-width:760px){.story{grid-template-columns:1fr;gap:0}}
+
+  /* expertise */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .ex{background:var(--ink);padding:38px 32px;transition:.25s}
+  .ex:hover{background:var(--ink-2)}
+  .ex .n{font-family:'Fraunces',serif;color:var(--jade-deep);font-size:14px;font-weight:700;letter-spacing:.1em}
+  .ex h3{font-size:21px;margin:14px 0 10px;font-weight:600}
+  .ex p{font-size:14.5px;color:var(--paper-mute);line-height:1.65}
+  @media(max-width:860px){.grid3{grid-template-columns:1fr}}
+
+  /* timeline */
+  .tl{position:relative;margin-left:8px}
+  .tl::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--line)}
+  .tl-item{position:relative;padding:0 0 42px 40px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-4px;top:7px;width:9px;height:9px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--jade);
+  }
+  .tl-item.lead-dot::before{background:var(--jade);box-shadow:0 0 0 4px rgba(63,191,143,.15)}
+  .tl-year{font-family:'Fraunces',serif;font-size:14px;color:var(--amber);font-weight:600;letter-spacing:.06em}
+  .tl-item h3{font-size:20px;margin:5px 0 3px;font-weight:600}
+  .tl-org{font-size:13.5px;color:var(--paper-mute);margin-bottom:9px;letter-spacing:.03em}
+  .tl-item p{font-size:14.5px;color:var(--paper-dim);max-width:46em}
+
+  /* quals */
+  .cols2{display:grid;grid-template-columns:1.3fr 1fr;gap:60px}
+  .ql{list-style:none}
+  .ql li{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;font-size:15px;color:var(--paper-dim)}
+  .ql li b{color:var(--paper);font-weight:600;min-width:88px;font-family:'Fraunces',serif;font-size:14px}
+  .lang-bar{margin:13px 0}
+  .lang-bar .t{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px;color:var(--paper-dim)}
+  .track{height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+  .track i{display:block;height:100%;background:linear-gradient(90deg,var(--jade-deep),var(--jade))}
+  @media(max-width:760px){.cols2{grid-template-columns:1fr;gap:40px}}
+
+  /* presence */
+  .links{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .lk{
+    border:1px solid var(--line);padding:26px 24px;border-radius:3px;transition:.22s;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .lk:hover{border-color:var(--jade);transform:translateY(-3px)}
+  .lk .h{font-family:'Fraunces',serif;font-size:18px;font-weight:600}
+  .lk .u{font-size:13px;color:var(--jade);letter-spacing:.03em}
+  .lk .d{font-size:13.5px;color:var(--paper-mute)}
+  @media(max-width:760px){.links{grid-template-columns:1fr}}
+
+  footer{padding:60px 0 70px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:flex-end}
+  .foot .sig{font-family:'Fraunces',serif;font-size:26px;font-weight:600}
+  .foot .meta{font-size:12.5px;color:var(--paper-mute);line-height:1.9;letter-spacing:.02em}
+  .foot .meta a{color:var(--paper-dim);border-bottom:1px solid var(--line)}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .ph{color:#E1483B}
+  .pub{list-style:none;counter-reset:pub}
+  .pub li{counter-increment:pub;display:grid;grid-template-columns:46px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .pub li::before{content:counter(pub,decimal-leading-zero);font-family:'Fraunces',serif;font-size:15px;color:var(--jade);font-weight:600;padding-top:3px}
+  .pub .ttl{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--paper);line-height:1.35;margin-bottom:7px}
+  .pub .src{font-size:13.5px;color:var(--paper-mute);letter-spacing:.02em;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+  .pub li a{display:block;text-decoration:none;color:inherit;transition:.2s}
+  .pub li a:hover .ttl{color:var(--jade)}
+  .pub li a:hover .arr{transform:translate(2px,-2px)}
+  .pub .tag{display:inline-block;color:var(--jade);border:1px solid var(--line);
+    border-radius:3px;padding:2px 10px;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;font-weight:600;font-family:'Inter',sans-serif}
+  .pub .meta{font-size:13.5px;color:var(--paper-mute);letter-spacing:.02em}
+  .pub .arr{display:inline-block;transition:.2s;color:var(--jade);margin-left:2px}
+  .tag-ph{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  .ph-pill{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:1px 9px;font-family:'Fraunces',serif;font-weight:600;letter-spacing:.04em;font-size:.92em}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Klaus Hürbl<small>Quoten &amp; Value</small></a>
+    <div class="navlinks">
+      <a href="#story">Geschichte</a>
+      <a href="#schwerpunkte">Schwerpunkte</a>
+      <a href="#werdegang">Werdegang</a>
+      <a href="#publikationen">Publikationen</a>
+      <a href="#qualifikation">Qualifikation</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Sportwetten-Analyst</div>
+        <h1>Klaus&nbsp;Hürbl</h1>
+        <div class="role">Quoten- &amp; Value-Experte · Ehem. Head of Football Trading</div>
+        <p class="lead"><em>„Ich habe jahrelang die Quoten gemacht — heute zeige ich, wie man sie schlägt."</em></p>
+        <p class="lead">Über zwölf Jahre auf der anderen Seite des Tresens: Quotengestaltung, Linienmanagement und Risiko bei einem internationalen Buchmacher. Seit 2018 unabhängig — und auf der Seite der Tipper.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#werdegang">Werdegang ansehen →</a>
+          <a class="btn btn-ghost" href="#kontakt">CV &amp; Kontakt</a>
+        </div>
+      </div>
+
+      <div class="portrait-frame">
+        <img src="assets/klaus-huerbl.webp" alt="Klaus Hürbl – Quoten- & Value-Experte" width="900" height="1124" loading="eager" fetchpriority="high">
+        <div class="badge"><b>12+</b><span>Jahre im Wettmarkt</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>12+</b><span>Jahre Buchmacher-Seite</span></div>
+    <div class="stat"><b>40k+</b><span>Quotierte Spiele</span></div>
+    <div class="stat"><b>30+</b><span>Abgedeckte Ligen</span></div>
+    <div class="stat"><b class="ph">90+</b><span>Publikation · Platzhalter</span></div>
+  </div>
+</div>
+
+<section id="story">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Die Geschichte</h2></div>
+    <p class="sec-sub">Wie aus einem Quotengestalter ein Anwalt der Tipper wurde.</p>
+    <div class="story reveal">
+      <div>
+        <p>Mathematik war für mich nie Theorie. Schon während meines Studiums der Technischen Mathematik an der TU Graz hat mich die eine Frage nicht losgelassen: Was ist ein Ergebnis wirklich wert, bevor es feststeht? 2004 saß ich zum ersten Mal an einem Trading-Desk und durfte Fußballquoten stellen — und genau da hat alles angefangen.</p>
+        <p>In den folgenden zwölf Jahren bin ich vom Junior-Quotengestalter zum Head of Football Trading aufgestiegen. Mein Job war es, Märkte zu eröffnen, Linien zu bewegen und Risiko zu steuern — Wochenende für Wochenende, Liga für Liga. Ich habe gesehen, wo Buchmacher ihre Margen verstecken, wann eine Quote „zu gut" ist und warum sich Linien kurz vor Anpfiff drehen.</p>
+      </div>
+      <div>
+        <p>Irgendwann wurde mir klar, dass das spannendere Spiel auf der anderen Seite läuft. 2018 habe ich die Branche verlassen, um genau das zu tun, was ich jahrelang verhindern sollte: Tippern zu zeigen, wie man eine Quote liest, einen Value erkennt und diszipliniert dranbleibt.</p>
+        <p>Heute schreibe ich als unabhängiger Analyst und Fachautor. Ich verkaufe keine Tipps. Ich erkläre, wie der Markt funktioniert, damit Sie Ihre eigenen besseren Entscheidungen treffen.</p>
+      </div>
+      <blockquote class="pullquote">„Eine Quote ist keine Vorhersage. Sie ist ein Preis — und Preise haben Fehler. Mein Job ist es, diese Fehler sichtbar zu machen."</blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="schwerpunkte">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Schwerpunkte</h2></div>
+    <p class="sec-sub">Worüber ich schreibe — und wovon ich aus erster Hand etwas verstehe.</p>
+    <div class="grid3 reveal">
+      <div class="ex"><div class="n">A</div><h3>Quotenbildung &amp; Marge</h3><p>Wie eine Quote entsteht, wie der Overround verteilt wird und woran Sie eine faire von einer teuren Linie unterscheiden.</p></div>
+      <div class="ex"><div class="n">B</div><h3>Value &amp; Erwartungswert</h3><p>EV-Denken statt Bauchgefühl: systematisch erkennen, wann eine Wette mathematisch im Vorteil ist — und wann nicht.</p></div>
+      <div class="ex"><div class="n">C</div><h3>Liniendynamik</h3><p>Warum sich Quoten bewegen, was „sharp money" wirklich aussagt und wie man Markteffizienz für sich nutzt.</p></div>
+      <div class="ex"><div class="n">D</div><h3>Modellierung</h3><p>Poisson- und xG-basierte Modelle für Fußballmärkte — pragmatisch, nachvollziehbar, ohne Black-Box.</p></div>
+      <div class="ex"><div class="n">E</div><h3>Risiko &amp; Bankroll</h3><p>Staking-Strategien, Drawdown-Management und Disziplin — die Themen, an denen die meisten Tipper scheitern.</p></div>
+      <div class="ex"><div class="n">F</div><h3>EU-Fußballmärkte</h3><p>Bundesliga, Serie A, La Liga, Premier League &amp; Turniere — Spezialgebiet mit jahrelanger Desk-Erfahrung.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="werdegang">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Werdegang</h2></div>
+    <p class="sec-sub">Lebenslauf — vom Hörsaal über den Trading-Desk zur unabhängigen Analyse.</p>
+    <div class="tl reveal">
+      <div class="tl-item lead-dot">
+        <div class="tl-year">2021 – heute</div>
+        <h3>Quoten- &amp; Value-Kolumnist</h3>
+        <div class="tl-org"><span class="ph-pill">90+</span> &nbsp;Publikation — Platzhalter</div>
+        <p>Verantwortlich für Quotenanalysen, Value-Betting-Strategien und Markteinschätzungen. Erklärt Tippern die Buchmacher-Logik aus Insider-Sicht.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2018 – heute</div>
+        <h3>Selbstständiger Sportwetten-Analyst &amp; Quoten-Consultant</h3>
+        <div class="tl-org">Klaus Hürbl Analytics — Graz</div>
+        <p>Unabhängige Markt- und Quotenanalysen, Modellentwicklung (Poisson/xG) und Fachpublikationen für deutschsprachige Wett-Medien.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2012 – 2018</div>
+        <h3>Head of Football Trading &amp; Risk</h3>
+        <div class="tl-org">Internationaler Buchmacher — Trading-Desk (Wien)</div>
+        <p>Leitung der Fußball-Quotierung über alle europäischen Top-Ligen und internationalen Turniere. Verantwortung für Margenstrategie, Linienmanagement und Risikosteuerung.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2006 – 2012</div>
+        <h3>Trader → Senior Trader, Football Markets</h3>
+        <div class="tl-org">Internationaler Buchmacher — Trading-Desk (Wien)</div>
+        <p>Quotierung und Live-Handel europäischer Fußballmärkte; Aufbau interner Bewertungsmodelle für Pre-Match-Linien.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2004 – 2006</div>
+        <h3>Junior Odds Compiler / Quotengestalter</h3>
+        <div class="tl-org">Sportwetten-Trading-Desk — Wien</div>
+        <p>Einstieg in die Quotengestaltung für Fußball; Datenaufbereitung, Modell-Backtesting und Marktbeobachtung.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1999 – 2004</div>
+        <h3>Dipl.-Ing. Technische Mathematik</h3>
+        <div class="tl-org">Technische Universität Graz</div>
+        <p>Schwerpunkt Statistik &amp; Wahrscheinlichkeitstheorie. Diplomarbeit zu probabilistischen Bewertungsmodellen für Sportereignisse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publikationen">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Publikationen &amp; Fachbeiträge</h2></div>
+    <p class="sec-sub">Methodische Beiträge zu Quotenbildung, probabilistischer Modellierung und Marktstruktur. Aktuelle Manuskripte zum Download.</p>
+    <ol class="pub reveal">
+      <li>
+        <a href="assets/papers/huerbl-probabilistische-modelle.pdf" target="_blank" rel="noopener">
+          <div class="ttl">Probabilistische Bewertungsmodelle für Fußballergebnisse</div>
+          <div class="src">
+            <span class="tag">Methodischer Beitrag</span>
+            <span class="meta">Manuskript · 7 Seiten · PDF <span class="arr">↗</span></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="assets/papers/huerbl-markteffizienz-liniendynamik.pdf" target="_blank" rel="noopener">
+          <div class="ttl">Markteffizienz und Liniendynamik in Sportwettenmärkten</div>
+          <div class="src">
+            <span class="tag">Projektpapier</span>
+            <span class="meta">Manuskript · 12 Seiten · PDF <span class="arr">↗</span></span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="assets/papers/huerbl-xg-vs-poisson.pdf" target="_blank" rel="noopener">
+          <div class="ttl">Poisson- vs. xG-Ansätze in der Quotenmodellierung</div>
+          <div class="src">
+            <span class="tag">Projektpapier</span>
+            <span class="meta">Manuskript · 26 Seiten · PDF <span class="arr">↗</span></span>
+          </div>
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="qualifikation">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Qualifikation &amp; Sprachen</h2></div>
+    <p class="sec-sub">Methodische Grundlagen, Zertifizierungen und Sprachkompetenz.</p>
+    <div class="cols2 reveal">
+      <div>
+        <ul class="ql">
+          <li><b>Methodik</b><span>Poisson- &amp; xG-Modellierung, Monte-Carlo-Simulation, Margen- &amp; Overround-Analyse, EV-/Value-Berechnung</span></li>
+          <li><b>Märkte</b><span>Pre-Match &amp; Live, 1X2, Over/Under, Asian Handicap, Spieler- &amp; Turniermärkte</span></li>
+          <li><b>Tools</b><span>Python &amp; R für Sportdatenmodelle, SQL, Tableau, gängige Odds- &amp; Datenfeeds (API-Football, Odds-APIs)</span></li>
+          <li><b>Zertifizierung</b><span>Responsible Gambling Practitioner; Risikomanagement-Weiterbildung (Sportwetten)</span></li>
+          <li><b>Vorträge</b><span>Gastvorträge Sportökonomie (FH) &amp; Branchen-Meetups zu Quotenbildung und Markteffizienz</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="lang-bar"><div class="t"><span>Deutsch</span><span>Muttersprache</span></div><div class="track"><i style="width:100%"></i></div></div>
+        <div class="lang-bar"><div class="t"><span>Englisch</span><span>Verhandlungssicher</span></div><div class="track"><i style="width:90%"></i></div></div>
+        <div class="lang-bar"><div class="t"><span>Italienisch</span><span>Gute Kenntnisse</span></div><div class="track"><i style="width:55%"></i></div></div>
+        <div class="lang-bar"><div class="t"><span>Spanisch</span><span>Grundkenntnisse</span></div><div class="track"><i style="width:35%"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Wo Sie mich finden</h2></div>
+    <p class="sec-sub">Veröffentlichungen, Profile und Kontakt.</p>
+    <div class="links reveal">
+      <a class="lk" href="#"><span class="h ph">90+</span><span class="u ph">Publikation · Platzhalter</span><span class="d">Quoten- &amp; Value-Kolumne, Analysen &amp; Strategie-Beiträge.</span></a>
+      <a class="lk" href="#"><span class="h">X / Twitter</span><span class="u">@KlausHuerbl</span><span class="d">Quoten-Bewegungen, Markt-Notizen &amp; kurze Value-Reads.</span></a>
+      <a class="lk" href="#"><span class="h">LinkedIn</span><span class="u">/in/klaus-huerbl</span><span class="d">Beruflicher Werdegang &amp; Branchenkontext.</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="sig">Klaus Hürbl</div>
+        <div class="meta">Quoten- &amp; Value-Experte · Graz, Österreich</div>
+      </div>
+      <div class="meta">
+        Kontakt: <a href="#">kontakt@klaus-huerbl.de</a><br>
+        © 2026 Klaus Hürbl · Sportwetten-Analyse &amp; Quoten-Beratung<br>
+        Hinweis: Inhalte richten sich an Personen ab 18 Jahren. Glücksspiel kann süchtig machen.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Klaus Hürbl",
+  "givenName": "Klaus",
+  "familyName": "Hürbl",
+  "gender": "Male",
+  "jobTitle": "Quoten- & Value-Experte / Sportwetten-Analyst",
+  "url": "https://www.klaus-huerbl.de/",
+  "image": "https://www.klaus-huerbl.de/klaus-huerbl.webp",
+  "description": "Ehemaliger Quotengestalter und Head of Football Trading. Heute unabhängiger Sportwetten-Analyst und Quoten-Experte.",
+  "knowsAbout": ["Quotenbildung","Value Betting","Sportwetten-Märkte","Poisson-Modellierung","Risikomanagement","EU-Fußball"],
+  "alumniOf": {"@type":"CollegeOrUniversity","name":"Technische Universität Graz"},
+  "homeLocation": {"@type":"Place","name":"Graz, Österreich"}
+}
+</script>
+
+<script>
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
