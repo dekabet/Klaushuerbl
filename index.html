@@ -223,6 +223,15 @@
   .org-arr{transition:.2s;color:var(--jade);flex:none}
   .tl-org .org-link:hover .org-arr{transform:translate(2px,-2px)}
 
+  /* social icons */
+  .social{display:flex;gap:12px;margin-top:18px}
+  .social a{
+    width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);border-radius:3px;color:var(--paper-dim);transition:.22s;
+  }
+  .social a:hover{border-color:var(--jade);color:var(--jade);transform:translateY(-3px)}
+  .social svg{width:18px;height:18px;display:block}
+
   /* live feed (90PLUS) */
   .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .fcard{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--ink-2);
@@ -457,9 +466,9 @@
     <div class="sec-head"><span class="sec-num">07</span><h2>Wo Sie mich finden</h2></div>
     <p class="sec-sub">Veröffentlichungen, Profile und Kontakt.</p>
     <div class="links reveal">
-      <a class="lk" href="https://neunzigplus.de/"><span class="h ph">90+</span><span class="u ph">Publikation </span><span class="d">Quoten- &amp; Value-Kolumne, Analysen &amp; Strategie-Beiträge.</span></a>
+      <a class="lk" href="#"><span class="h">Instagram</span><span class="u">@klaushuerbl</span><span class="d">Quoten-Snapshots, Visuals &amp; Behind-the-Scenes.</span></a>
+      <a class="lk" href="#"><span class="h">TikTok</span><span class="u">@klaushuerbl</span><span class="d">Kurze Clips zu Quoten, Value &amp; Markt-Logik.</span></a>
       <a class="lk" href="#"><span class="h">X / Twitter</span><span class="u">@KlausHuerbl</span><span class="d">Quoten-Bewegungen, Markt-Notizen &amp; kurze Value-Reads.</span></a>
-      <a class="lk" href="#"><span class="h">LinkedIn</span><span class="u">/in/klaus-huerbl</span><span class="d">Beruflicher Werdegang &amp; Branchenkontext.</span></a>
     </div>
   </div>
 </section>
@@ -470,6 +479,17 @@
       <div>
         <div class="sig">Klaus Hürbl</div>
         <div class="meta">Quoten- &amp; Value-Experte · Graz, Österreich</div>
+        <div class="social">
+          <a href="https://x.com/KlausHuerbl" aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@neunzigplus" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.01-2.82h-3.13v12.4a2.52 2.52 0 0 1-2.52 2.52 2.52 2.52 0 1 1 .73-4.93v-3.2a5.67 5.67 0 0 0-.73-.05A5.66 5.66 0 1 0 15.6 15.4V9.01a7.36 7.36 0 0 0 4.3 1.38V7.26a4.28 4.28 0 0 1-3.3-1.44Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/neunzigplusde" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
       </div>
       <div class="meta">
         Kontakt: <a href="#">kontakt@klaus-huerbl.de</a><br>
