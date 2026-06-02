@@ -214,6 +214,28 @@
   .pub .arr{display:inline-block;transition:.2s;color:var(--jade);margin-left:2px}
   .tag-ph{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
   .ph-pill{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:1px 9px;font-family:'Fraunces',serif;font-weight:600;letter-spacing:.04em;font-size:.92em}
+
+  /* live feed (90PLUS) */
+  .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .fcard{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--ink-2);
+    display:flex;flex-direction:column;transition:.25s}
+  .fcard:hover{border-color:var(--jade);transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(0,0,0,.8)}
+  .fcard .thumb{aspect-ratio:3/2;overflow:hidden;background:var(--panel)}
+  .fcard .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+  .fcard:hover .thumb img{transform:scale(1.045)}
+  .fcard .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .fcard .cat{font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--jade)}
+  .fcard h3{font-size:18px;font-weight:600;line-height:1.32;color:var(--paper);transition:.2s}
+  .fcard:hover h3{color:var(--jade)}
+  .fcard time{margin-top:auto;font-size:12.5px;color:var(--paper-mute);letter-spacing:.04em}
+  .feed-foot{margin-top:36px}
+  .feed-msg{grid-column:1/-1;color:var(--paper-mute);font-size:14.5px}
+  .feed-msg a{color:var(--jade)}
+  .skel{height:312px;border:1px solid var(--line);border-radius:4px;
+    background:linear-gradient(100deg,var(--ink-2) 30%,var(--panel) 50%,var(--ink-2) 70%);
+    background-size:200% 100%;animation:sh 1.3s linear infinite}
+  @keyframes sh{to{background-position:-200% 0}}
+  @media(max-width:860px){.feed{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -226,6 +248,7 @@
       <a href="#schwerpunkte">Schwerpunkte</a>
       <a href="#werdegang">Werdegang</a>
       <a href="#publikationen">Publikationen</a>
+      <a href="#beitraege">Beiträge</a>
       <a href="#qualifikation">Qualifikation</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -378,9 +401,22 @@
   </div>
 </section>
 
+<section id="beitraege">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Aktuelle Beiträge</h2></div>
+    <p class="sec-sub">Meine neuesten Quoten- und Marktanalysen — live von 90PLUS.</p>
+    <div class="feed reveal" id="kh-feed" aria-live="polite">
+      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+    </div>
+    <div class="feed-foot">
+      <a class="btn btn-ghost" href="https://neunzigplus.de/author/klaush/" target="_blank" rel="noopener">Alle Beiträge auf 90PLUS →</a>
+    </div>
+  </div>
+</section>
+
 <section id="qualifikation">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Qualifikation &amp; Sprachen</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Qualifikation &amp; Sprachen</h2></div>
     <p class="sec-sub">Methodische Grundlagen, Zertifizierungen und Sprachkompetenz.</p>
     <div class="cols2 reveal">
       <div>
@@ -404,7 +440,7 @@
 
 <section id="kontakt">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Wo Sie mich finden</h2></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Wo Sie mich finden</h2></div>
     <p class="sec-sub">Veröffentlichungen, Profile und Kontakt.</p>
     <div class="links reveal">
       <a class="lk" href="https://neunzigplus.de/"><span class="h ph">90+</span><span class="u ph">Publikation </span><span class="d">Quoten- &amp; Value-Kolumne, Analysen &amp; Strategie-Beiträge.</span></a>
@@ -446,6 +482,44 @@
   "alumniOf": {"@type":"CollegeOrUniversity","name":"Technische Universität Graz"},
   "homeLocation": {"@type":"Place","name":"Graz, Österreich"}
 }
+</script>
+
+<script>
+  /* Live feed: Klaus Hürbl's posts on 90PLUS via the WordPress REST API */
+  (async () => {
+    const feed = document.getElementById('kh-feed');
+    if (!feed) return;
+    const API = 'https://neunzigplus.de/wp-json/wp/v2';
+    const COUNT = 6;
+    const fmt = d => new Date(d).toLocaleDateString('de-DE', {day:'numeric', month:'long', year:'numeric'});
+    const fail = () => { feed.innerHTML =
+      '<p class="feed-msg">Beiträge konnten gerade nicht geladen werden. ' +
+      '<a href="https://neunzigplus.de/author/klaush/" target="_blank" rel="noopener">Direkt auf 90PLUS ansehen →</a></p>'; };
+    try {
+      const users = await (await fetch(`${API}/users?slug=klaush`)).json();
+      const id = Array.isArray(users) && users[0] && users[0].id;
+      if (!id) return fail();
+      const posts = await (await fetch(`${API}/posts?author=${id}&_embed&per_page=${COUNT}`)).json();
+      if (!Array.isArray(posts) || !posts.length) return fail();
+      feed.innerHTML = posts.map(p => {
+        const media = p._embedded && p._embedded['wp:featuredmedia'] && p._embedded['wp:featuredmedia'][0];
+        const img = (media && media.media_details && media.media_details.sizes &&
+                     (media.media_details.sizes.medium_large || media.media_details.sizes.large || media.media_details.sizes.medium) || {}).source_url
+                    || (media && media.source_url) || '';
+        const term = p._embedded && p._embedded['wp:term'] && p._embedded['wp:term'][0] && p._embedded['wp:term'][0][0];
+        const cat = (term && term.name) || '90PLUS';
+        const title = (p.title && p.title.rendered) || '';
+        return `<a class="fcard" href="${p.link}" target="_blank" rel="noopener">
+          <div class="thumb">${img ? `<img src="${img}" alt="" loading="lazy">` : ''}</div>
+          <div class="body">
+            <span class="cat">${cat}</span>
+            <h3>${title}</h3>
+            <time datetime="${p.date}">${fmt(p.date)}</time>
+          </div>
+        </a>`;
+      }).join('');
+    } catch (e) { fail(); }
+  })();
 </script>
 
 <script>
