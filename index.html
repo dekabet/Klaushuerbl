@@ -215,6 +215,14 @@
   .tag-ph{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
   .ph-pill{display:inline-block;color:#E1483B;border:1px dashed #E1483B;border-radius:3px;padding:1px 9px;font-family:'Fraunces',serif;font-weight:600;letter-spacing:.04em;font-size:.92em}
 
+  /* timeline org link */
+  .tl-org .org-link{display:inline-flex;align-items:center;gap:9px;color:var(--paper-dim);transition:.2s}
+  .tl-org .org-link:hover{color:var(--jade)}
+  .org-pill{display:inline-flex;align-items:center;font-family:'Fraunces',serif;font-weight:600;font-size:.92em;letter-spacing:.04em;color:var(--jade);border:1px solid var(--jade-deep);border-radius:3px;padding:1px 9px;transition:.2s}
+  .tl-org .org-link:hover .org-pill{border-color:var(--jade);background:rgba(63,191,143,.08)}
+  .org-arr{transition:.2s;color:var(--jade);flex:none}
+  .tl-org .org-link:hover .org-arr{transform:translate(2px,-2px)}
+
   /* live feed (90PLUS) */
   .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .fcard{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--ink-2);
@@ -328,7 +336,13 @@
       <div class="tl-item lead-dot">
         <div class="tl-year">2021 – heute</div>
         <h3>Quoten- &amp; Value-Kolumnist</h3>
-        <div class="tl-org"><span class="ph-pill">90+</span> &nbsp;Publikation</div>
+        <div class="tl-org">
+          <a class="org-link" href="https://neunzigplus.de/author/klaush/" target="_blank" rel="noopener">
+            <span class="org-pill">90+</span>
+            <span>Publikation</span>
+            <svg class="org-arr" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </a>
+        </div>
         <p>Verantwortlich für Quotenanalysen, Value-Betting-Strategien und Markteinschätzungen. Erklärt Tippern die Buchmacher-Logik aus Insider-Sicht.</p>
       </div>
       <div class="tl-item">
